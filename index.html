@@ -3,93 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtsColab | Comunidad Creativa Latina</title>
+    <title>Arts.Co.Lab | Laboratorio de Colaboración Artística</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Tipografías elegantes -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Nav -->
+    <!-- Navegación Completa -->
     <header>
         <nav>
-            <div class="logo">artscolab<span>.</span></div>
-            <ul>
-                <li><a href="#comunidad">Comunidad</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+            <div class="logo">Arts.Co.Lab<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="#programs">Programas ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Becas (TGW)</a></li>
+                        <li><a href="#">Negocios (TAB)</a></li>
+                        <li><a href="#">Mercado (TAM)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#coaching">Coaching</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
-            <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-join">Únete al Club</a>
+            <a href="https://wa.me/TU_TELEFONO" class="btn-nav">Únete al Lab</a>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero: Laboratorio de Colaboración -->
         <section class="hero">
-            <div class="grid-bg"></div>
-            <div class="hero-content">
-                <span class="badge">Donde el arte se encuentra con la diáspora</span>
-                <h1>la comunidad para <span>artistas latinos</span> en el mundo</h1>
-                <p>Un espacio colaborativo para emprendedores y creativos fuera de su lugar de origen.</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn-primary">Explorar Proyectos</a>
+            <div class="hero-inner">
+                <span class="badge-top">Agencia de Equidad Cultural</span>
+                <h1>Un laboratorio de <span>colaboración artística</span> para el mundo</h1>
+                <p>Fortalecemos el ecosistema cultural de comunidades migrantes, BIIPOC y creativos subrepresentados a través del desarrollo profesional y la creación de infraestructura.</p>
+                <div class="cta-group">
+                    <a href="#programs" class="btn-main">Ver Programas</a>
+                    <a href="https://artscolab.com/" class="btn-secondary">Watch More →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Marquee Dinámico (Texto que corre) -->
-        <div class="marquee">
+        <!-- Marquee de Impacto -->
+        <div class="marquee-stripe">
             <div class="marquee-content">
-                CREATIVIDAD • COLABORACIÓN • EMPRENDIMIENTO • ARTE LATINO • COMUNIDAD • DISEÑO • RESILIENCIA •&nbsp;
-                CREATIVIDAD • COLABORACIÓN • EMPRENDIMIENTO • ARTE LATINO • COMUNIDAD • DISEÑO • RESILIENCIA •
+                +235 ARTISTAS APOYADOS • $2.3M EN BECAS RECAUDADAS • EQUIDAD CULTURAL • RESILIENCIA • CREATIVIDAD LATINA •&nbsp;
+                +235 ARTISTAS APOYADOS • $2.3M EN BECAS RECAUDADAS • EQUIDAD CULTURAL • RESILIENCIA • CREATIVIDAD LATINA •
             </div>
         </div>
 
-        <!-- Tarjetas de Servicios (Inspirado en la imagen) -->
-        <section class="services" id="servicios">
-            <div class="card card-pink">
-                <div class="card-img"><img src="tu-foto-1.jpg" alt="Colaboración"></div>
-                <h3>Únete a la Red</h3>
-                <p>Conecta con otros artistas que comparten tu historia y cultura.</p>
-                <a href="#" class="btn-outline">Saber más</a>
-            </div>
-            <div class="card card-blue">
-                <div class="card-img"><img src="tu-foto-2.jpg" alt="Recursos"></div>
-                <h3>Recursos Creativos</h3>
-                <p>Plantillas y guías para llevar tu emprendimiento al siguiente nivel.</p>
-                <a href="#" class="btn-outline">Descargar</a>
-            </div>
-            <div class="card card-green">
-                <div class="card-img"><img src="tu-foto-3.jpg" alt="Talleres"></div>
-                <h3>Talleres Artísticos</h3>
-                <p>Aprende nuevas técnicas y estrategias de negocio para artistas.</p>
-                <a href="#" class="btn-outline">Ver Fechas</a>
-            </div>
-        </section>
-
-        <!-- Sección de Membresía / Contacto -->
-        <section class="membership" id="nosotros">
-            <div class="membership-text">
-                <h2>Tu espacio seguro para crear fuera de casa</h2>
-                <p>ArtsColab no es solo una plataforma, es un refugio creativo. Si eres un artista latino emprendiendo en el extranjero, aquí encontrarás las herramientas y la red de contactos que necesitas.</p>
-                <div class="contact-info">
-                    <p><strong>WhatsApp:</strong> +[TU NÚMERO AQUÍ]</p>
-                    <p><strong>Email:</strong> info@artscolab.com</p>
+        <!-- Sección Nosotros (Equity & Pedagogy) -->
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Nuestra Misión</h2>
+                    <p>Arts.Co.Lab nace como respuesta a los desafíos de gentrificación y crisis de salud. Creemos en la creación artística como un derecho humano. Nuestra pedagogía se basa en prácticas indígenas, liberación negra y teoría de género.</p>
+                    <div class="stats">
+                        <div class="stat-item"><strong>Accesible</strong><br>Diseño claro y flujo de información simple.</div>
+                        <div class="stat-item"><strong>Flexible</strong><br>Contenido que se adapta a tu ritmo de vida.</div>
+                    </div>
                 </div>
-                <a href="#" class="btn-dark">Hablemos por WhatsApp</a>
-            </div>
-            <div class="membership-media">
-                <!-- Aquí mantienes tu video o multimedia original -->
-                <div class="media-placeholder">
-                    <img src="tu-video-original.gif" alt="Multimedia ArtsColab" style="width:100%; border-radius: 20px;">
+                <div class="about-media">
+                    <!-- Aquí pones tu video o imagen principal -->
+                    <div class="media-box">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5b1f09e0365019070776b7e0/1654813533804-0U1G9F2Z8N3X2B1V9E5V/ArtsCoLab_Hero.jpg" alt="Artistas Colaborando">
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 ArtsColab. Hecho con ❤️ para la comunidad latina.</p>
-    </footer>
-
-</body>
-</html>
+        <!-- Programas Transformativos (Estilo Cards PLM) -->
+        <section id="programs" class="programs-section">
+            <div class="section-header">
+                <h2>Programas Transformativos</h2>
+                <p>Herramientas diseñadas para elevar tu práctica artística al siguiente nivel.</p>
+            </div>
+            <div class="program-grid">
+                <div class="card card-pink">
+                    <div class="card-tag">TGW</div>
+                    <h3>Escritura de Becas</h3>
+                    <p>Mentoría práctica para romper el molde de la burocracia institucional y obtener
