@@ -1,163 +1,119 @@
 :root {
-    --bg-color: #fdfaf5;
+    --bg: #fdfaf5;
     --pink: #f8d7da;
     --blue: #d1ecf1;
     --green: #d4edda;
-    --dark: #2d2d2d;
+    --dark: #1a1a1a;
     --accent: #ff6b6b;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-color);
+    background: var(--bg);
     color: var(--dark);
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* Header */
+/* Header & Logo */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background: white;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 25px 5%; background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.8rem; font-weight: 900; letter-spacing: -1px;
 }
-
 .logo span { color: var(--accent); }
 
-nav ul { display: flex; list-style: none; gap: 30px; }
-nav ul a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
 
-.btn-join {
-    background-color: var(--dark);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s;
+.btn-nav {
+    background: var(--dark); color: white; padding: 12px 25px;
+    border-radius: 50px; text-decoration: none; font-weight: 600;
 }
 
 /* Hero Section */
 .hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 0 10%;
+    min-height: 80vh; display: flex; align-items: center; text-align: center;
+    padding: 100px 10%; background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
-.grid-bg {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.3;
-    z-index: -1;
-}
-
-.hero-content h1 {
+.hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    line-height: 1.1;
-    margin-bottom: 20px;
+    font-size: clamp(3rem, 7vw, 5rem); line-height: 1.1; margin-bottom: 30px;
 }
+.hero h1 span { font-style: italic; color: var(--accent); }
 
-.hero-content h1 span { font-style: italic; color: var(--accent); }
-
-.badge {
-    background: var(--pink);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
+.badge-top {
+    background: white; border: 1px solid #ddd; padding: 8px 20px;
+    border-radius: 50px; font-size: 0.8rem; font-weight: 800; display: inline-block; margin-bottom: 20px;
 }
 
 /* Marquee */
-.marquee {
-    background: var(--dark);
-    color: white;
-    padding: 15px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    font-weight: bold;
+.marquee-stripe {
+    background: var(--dark); color: white; padding: 20px 0;
+    overflow: hidden; white-space: nowrap; font-weight: 800;
 }
-
 .marquee-content {
-    display: inline-block;
-    animation: scroll 20s linear infinite;
+    display: inline-block; animation: scroll 25s linear infinite;
 }
+@keyframes scroll { from {transform: translateX(0);} to {transform: translateX(-50%);} }
 
-@keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
-
-/* Cards */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 100px 5%;
+/* Programs Cards */
+.programs-section { padding: 100px 5%; }
+.program-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; margin-top: 50px;
 }
 
 .card {
-    padding: 40px;
-    border-radius: 25px;
-    transition: transform 0.3s ease;
+    padding: 50px 40px; border-radius: 30px; position: relative;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
-.card:hover { transform: translateY(-10px); }
+.card:hover { transform: scale(1.03) rotate(1deg); }
 .card-pink { background: var(--pink); }
 .card-blue { background: var(--blue); }
 .card-green { background: var(--green); }
 
-.card-img {
-    height: 200px;
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    overflow: hidden;
+.card-tag { font-weight: 800; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 20px; opacity: 0.6; }
+.card h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; }
+
+.btn-card {
+    display: inline-block; margin-top: 25px; color: var(--dark);
+    text-decoration: none; border-bottom: 2px solid var(--dark); font-weight: 800;
 }
 
-/* Membership Section */
-.membership {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 100px 5%;
+/* About Grid */
+.about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 100px 5%;
     align-items: center;
 }
+.media-box img { width: 100%; border-radius: 40px; box-shadow: 20px 20px 0 var(--pink); }
 
+/* Coaching section */
+.coaching-cta {
+    background: white; margin: 50px 5%; padding: 80px; border-radius: 40px;
+    text-align: center; border: 1px solid #eee;
+}
+.topics { display: flex; justify-content: center; gap: 20px; list-style: none; margin: 30px 0; font-weight: 600; }
 .btn-dark {
-    display: inline-block;
-    margin-top: 20px;
-    background: var(--dark);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 50px;
-    text-decoration: none;
+    background: var(--dark); color: white; padding: 18px 40px;
+    border-radius: 50px; text-decoration: none; font-weight: 700;
 }
 
+/* Footer */
+footer { padding: 100px 5% 30px; background: #fff; border-top: 1px solid #eee; }
+.footer-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
+.copyright { font-size: 0.8rem; opacity: 0.5; text-align: center; }
+
 @media (max-width: 768px) {
-    .membership { grid-template-columns: 1fr; }
-    nav ul { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero { padding: 60px 5%; }
 }
